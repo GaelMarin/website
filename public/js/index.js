@@ -181,7 +181,7 @@ $(document).ready(function() {
 
   // Header "Gm" line drawing
   var lineDrawing = anime({
-    targets: '#animeTest path',
+    targets: '#animationLogo path',
     strokeDashoffset: [0, anime.setDashoffset],
     easing: 'linear',
     delay: 500,
@@ -193,7 +193,7 @@ $(document).ready(function() {
 
   // Header "Gm" color changing
   var colors = anime({
-    targets: '#animeTest path',
+    targets: '#animationLogo path',
     stroke: [
       {value: '#e74c3c'},
       {value: '#F0F0F0'},
@@ -208,6 +208,6 @@ $(document).ready(function() {
   });
 
   // Header bubbles effect
-  particlesJS.load('particles-js', 'src/assets/particlesjs-config.json');
+  particlesJS.load('particles-js', 'assets/particles/particlesjs-config.json')
 
 });
