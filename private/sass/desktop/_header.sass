@@ -1,0 +1,93 @@
+#navbar
+  width: 100%
+  position: absolute
+  top: 0
+  z-index: 1000
+  background-color: $alizarin
+  #logo
+    position: absolute
+    left: 10px
+    top: 10px
+    img
+      display: block
+      height: 44px
+
+  .navbar-list
+    display: flex
+    flex-direction: row
+    justify-content: flex-end
+    margin: 0
+
+    .navbar-item
+      list-style-type: none
+      margin: 15px
+      height: 100%
+
+.header
+  display: flex
+  flex-direction: column
+  position: relative
+  height: 100vh
+  min-height: 400px
+  padding-top: 60px
+  background: $noir url('/img/forestOpti.jpg') no-repeat fixed center
+
+  .header-content
+    z-index: 1
+    position: relative
+    margin: auto
+
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+    #animationLogo
+      margin: auto
+    .separator
+      height: 2px
+      width: 30%
+      margin: 10px auto
+      background-color: $alizarin
+    .header-text
+      color: $clair
+      text-align: center
+      text-transform: uppercase
+      margin: 0
+      &.primary
+        font-size: 44px
+      &.secondary
+        font-size: 36px
+        font-weight: bold
+    .cta
+      text-align: center
+      .cta-button
+        display: inline-block
+        color: $clair
+        background-color: $alizarin
+        border: 1px solid $alizarin
+        padding: 15px 20px
+        border-radius: 5px
+        text-transform: uppercase
+        text-decoration: none
+        font-weight: bold
+        opacity: 1
+        cursor: pointer
+        transition: all ease-in-out .2s
+        &:hover
+          opacity: .8
+          color: $alizarin
+          background-color: $clair
+
+  #header-arrow-down
+    margin: 0 auto 15px
+    color: $clair
+    text-align: center
+    transform: rotateY(0)
+    transition: all ease-in-out .2s
+    height: 31px
+    width: 31px
+
+
+    &:hover
+      cursor: pointer
+      transform: rotateY(180)
