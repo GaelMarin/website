@@ -1,111 +1,90 @@
-// main: ../main.sass
+/* main: ../main.sass */
 
-nav
-
-  .brand-logo
-    max-height: 100%
-    img
-      max-height: 100%
-      padding: 12px
-      vertical-align: inherit
-
-// Materialize parallax fix
-.parallax-container
-  img
-    left: 0 !important
-    transform: translateX(0)
-
-/*#navbar
-  width: 100%
+#navbar
   position: absolute
-  top: 0
-  z-index: 1000
-  background-color: $alizarin
-  #logo
-    position: absolute
-    left: 10px
-    top: 10px
-    img
+
+  nav
+    background-color: $alizarin
+
+    .brand-logo
+      max-height: 100%
+      img
+        max-height: 100%
+        padding: 12px
+        vertical-align: inherit
+        height: 64px
+
+    .navbar-link
+      text-transform: uppercase
+
+    #menu-bar
+      width: 0px
+      height: 5px
       display: block
-      height: 44px
+      position: absolute
+      bottom: 0px
+      left: 0px
+      transition: all ease-in-out 1s
 
-  .navbar-list
-    display: flex
-    flex-direction: row
-    justify-content: flex-end
-    margin: 0
+#slide-out
+  background-color: $clair
+  .background
+    background-color: rgba($alizarin, .8)
 
-    .navbar-item
-      list-style-type: none
-      margin: 15px
-      height: 100%
+  .navbar-link:hover
+    color: rgba($alizarin, .8)
 
-/*.header
-  display: flex
-  flex-direction: column
+    .material-icons
+      color: rgba($alizarin, .8)
+
+#header
   position: relative
   height: 100vh
-  min-height: 400px
-  padding-top: 60px
-  background: $noir url('/img/forestOpti.jpg') no-repeat fixed center
+  min-height: 500px
+  background: rgba($alizarin, .5) url('/img/redCanyonOpti.jpg') no-repeat fixed center
   background-size: cover
+  display: flex
+  align-items: center
 
-  .header-content
-    z-index: 1
-    position: relative
+  #animationLogo
+    display: block
     margin: auto
-
-    display: flex
-    flex-direction: column
-    justify-content: center
-
-    #animationLogo
-      margin: auto
-    .separator
-      height: 2px
-      width: 30%
-      margin: 10px auto
-      background-color: $alizarin
-    .header-text
-      color: $clair
-      text-align: center
-      text-transform: uppercase
-      margin: 0
-      &.primary
-        font-size: 44px
-      &.secondary
-        font-size: 36px
-        font-weight: bold
-    .cta
-      text-align: center
-      .cta-button
-        display: inline-block
-        color: $clair
-        background-color: $alizarin
-        border: 1px solid $alizarin
-        padding: 15px 20px
-        border-radius: 5px
-        text-transform: uppercase
-        text-decoration: none
-        font-weight: bold
-        opacity: 1
-        cursor: pointer
-        transition: all ease-in-out .2s
-        &:hover
-          opacity: .8
-          color: $alizarin
-          background-color: $clair
+    color: white
+    &:hover
 
   #header-arrow-down
-    margin: 0 auto 15px
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    p
+      margin: 0
+
+  .header-text
     color: $clair
-    text-align: center
-    transform: rotateY(0)
-    transition: all ease-in-out .2s
-    height: 31px
-    width: 31px
+    font-size: 36px
+    letter-spacing: -2px
+    text-transform: uppercase
+    margin: 0
+    -moz-user-select: none
+    -webkit-user-select: none
+    -ms-user-select: none
+    -o-user-select: none
+    user-select: none
 
+  .particles-wrapper
+    position: absolute
+    width: 100%
+    height: 100%
+    z-index: 0
+    background-color: rgba(20,20,20,.3)
+    #particles-js
+      height: 100%
+      width: 100%
 
-    &:hover
-      cursor: pointer
-      transform: rotateY(180)
+  #cta-button
+    pointer-events: auto
+
+  .container
+    z-index: 1
+    pointer-events: none

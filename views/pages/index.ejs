@@ -16,108 +16,122 @@
     <!-- materialize 1.0 -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="assets/materialize/css/materialize.min.css">
-
     <link rel="stylesheet" href="css/style.css">
 
   </head>
   <body>
-
-    <nav id="navbar">
-      <div class="nav-wrapper">
-        <a href="#!" class="brand-logo">
-          <img src="img/logo-gm.svg" alt="Logo">
-        </a>
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="#accueil" class="navbar-link" id="header">Accueil</a></li>
-          <li><a href="#profil" class="navbar-link" id="profile">Profil</a></li>
-          <li><a href="#services" class="navbar-link" id="services">Services</a></li>
-          <li><a href="#contact" class="navbar-link" id="contact">Contact</a></li>
-        </ul>
+    <header id="navbar">
+      <div class="navbar-fixed">
+        <nav>
+          <div class="nav-wrapper">
+            <a href="/" class="brand-logo">
+              <img src="img/logo-gm.png" alt="Logo">
+            </a>
+            <ul class="right hide-on-med-and-down">
+              <li><a href="#header" class="navbar-link active" id="headerLink">Accueil</a></li>
+              <li><a href="#profile" class="navbar-link" id="profileLink">Profil</a></li>
+              <li><a href="#services" class="navbar-link" id="servicesLink">Services</a></li>
+              <li><a href="#contact" class="navbar-link" id="contactLink">Contact</a></li>
+              <span id="menu-bar" class="red darken-4"></span>
+            </ul>
+            <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          </div>
+        </nav>
       </div>
-    </nav>
-    <section class="header" id="headerSection">
-      <div class="parallax-container">
-        <div class="parallax">
-          <img src="img/forestOpti.jpg" alt="">
+      <ul id="slide-out" class="sidenav">
+        <li><div class="user-view">
+          <div class="background">
+          </div>
+          <img class="circle" src="img/photo-profil.png">
+          <p class="white-text name">Gaël MARIN</p>
+          <p class="white-text email">mrn.gael@gmail.com</p>
+        </div></li>
+        <li><a href="#header" class="navbar-link" id="headerSideLink"><i class="material-icons">home</i>Accueil</a></li>
+        <li><a href="#profile" class="navbar-link" id="profileSideLink"><i class="material-icons">account_box</i>Profil</a></li>
+        <li><a href="#services" class="navbar-link" id="servicesSideLink"><i class="material-icons">room_service</i>Services</a></li>
+        <li><a href="#contact" class="navbar-link" id="contactSideLink"><i class="material-icons">local_phone</i>Contact</a></li>
+      </ul>
+    </header>
+    <main>
+      <section id="header">
+        <h1 style="display: none;">Gaël MARIN - Développeur Web et Logiciel</h1>
+        <div class="container">
+          <div class="row center" id="animationLogo">
+            <svg width="160" height="115">
+              <path d="M 95 30 A 50 50 0 1 0 95 90 L 95 60 L 55 60 M 115 110 L 115 60 L 135 80 L 155 60 L 155 110" stroke-width="6px" fill="none"/>
+            </svg>
+          </div>
+          <div class="separator"></div>
+          <div class="row center">
+            <p class="header-text"><span style="font-weight:bold;">Bonjour</span>, je suis <span style="font-weight:bold;">Gaël MARIN</span></p>
+            <p class="header-text" id="catchPhrase">&nbsp;</p>
+          </div>
+          <div class="separator"></div>
+          <div class="row center">
+            <a class="waves-effect waves-dark btn-large red darken-1" id="cta-button"><i class="material-icons right">chevron_right</i>Me contacter</a>
+          </div>
         </div>
-      </div>
-      <h1 style="display: none;">Gaël MARIN - Développeur Web et Logiciel</h1>
-      <div class="wrapper header-content">
-
-          <div id="particles-js" style="position: absolute;width:100%;z-index: 0;"></div>
-        <div id="animationLogo">
-          <svg width="160" height="115">
-            <path d="M 95 30 A 50 50 0 1 0 95 90 L 95 60 L 55 60 M 115 110 L 115 60 L 135 80 L 155 60 L 155 110" stroke-width="6px" fill="none"/>
-          </svg>
+        <div class="particles-wrapper">
+          <div id="particles-js"></div>
         </div>
-        <div class="separator"></div>
-        <p class="header-text primary">Bonjour, je suis Gaël MARIN,</p>
-        <p class="header-text secondary" id="catchPhrase">&nbsp;</p>
-        <div class="separator"></div>
-        <p class="cta"><a class="cta-button" href="#contact" id="cta-button">Contactez-moi</a></p>
-      </div>
-      <a href="#profile" id="header-arrow-down"><i class="fa fa-2x fa-arrow-circle-down" aria-hidden="true"></i></a>
-    </section>
-    <section class="profile" id="profileSection">
-      <div class="wrapper">
-        <div class="profile-photo-wrapper">
-          <img src="./img/photo.png" alt="Logo Gaël MARIN" class="profile-photo" width="250" height="250">
+        <div class="row center" id="header-arrow-down">
+          <p style="text-align:center;">
+            <a class="btn-floating btn-large waves-effect waves-light red lighten-1 z-depth-3"><i class="material-icons">arrow_downward</i></a>
+          </p>
         </div>
-        <div class="profile-infos">
-          <h2 class="section-title">Je peux tout développer</h2>
-          <p>De formation informatique j'ai étudié tous les aspects de celle-ci (Développement logiciel & web, SGBD, réseaux, IHM, ...) à travers un DUT et une licence Informatique ponctués par plusieurs stages au CHU de Rangueil et à l'IRIT à Toulouse.</p>
-          <p>Je suis actuellement une formation expert en stratégie digitale où je développe mes compétences en webmarketing, communication et gestion de projet web.</p>
-          <div class="socials">
-            <div class="social-item">
-              <a href="https://www.linkedin.com/in/ga%C3%ABlmarin/" target="_blank"><i class="fa fa-linkedin"></i></a>
+      </section>
+      <section id="profile">
+        <div class="container">
+          <div class="row">
+            <div class="col l5 m12 s12">
+              <img src="./img/photo-profil.png" alt="Logo Gaël MARIN" class="profile-picture circle z-depth-4" width="250" height="250">
             </div>
-            <div class="social-item">
-              <a href="#"><i class="fa fa-envelope"></i></a>
+            <div class="col l7 m12 s12">
+              <h2 class="profile-title">Je peux tout développer</h2>
+              <p class="profile-text">De formation informatique j'ai étudié tous les aspects de celle-ci (Développement logiciel & web, SGBD, réseaux, IHM, ...) à travers un DUT et une licence Informatique ponctués par plusieurs stages au CHU de Rangueil et à l'IRIT à Toulouse.</p>
+              <p class="profile-text">Je suis actuellement une formation expert en stratégie digitale où je développe mes compétences en webmarketing, communication et gestion de projet web.</p>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="skills">
-      <div class="wrapper">
-        <div class="skills-list">
-          <div class="skill-container html">
+      </section>
+      <section id="skills">
+        <div class="row container skills-list">
+          <div class="col m6 s12 skill-container html">
             <div class="skill-name">HTML</div>
             <div class="skill-level" id="count-skill-level-html">0%</div>
             <div class="skill-bar">
               <div class="skill-bar-level" id="skill-bar-html"></div>
             </div>
           </div>
-          <div class="skill-container css">
+          <div class="col m6 s12 skill-container css">
             <div class="skill-name">CSS & SASS</div>
             <div class="skill-level" id="count-skill-level-css">0%</div>
             <div class="skill-bar">
               <div class="skill-bar-level" id="skill-bar-css"></div>
             </div>
           </div>
-          <div class="skill-container js">
+          <div class="col m6 s12 skill-container js">
             <div class="skill-name">Javascript & JQuery</div>
             <div class="skill-level" id="count-skill-level-js">0%</div>
             <div class="skill-bar">
               <div class="skill-bar-level" id="skill-bar-js"></div>
             </div>
           </div>
-          <div class="skill-container php">
+          <div class="col m6 s12 skill-container php">
             <div class="skill-name">PHP & MySQL</div>
             <div class="skill-level" id="count-skill-level-php">0%</div>
             <div class="skill-bar">
               <div class="skill-bar-level" id="skill-bar-php"></div>
             </div>
           </div>
-          <div class="skill-container adobe">
-            <div class="skill-name">Logiciels Adobe</div>
-            <div class="skill-level" id="count-skill-level-adobe">0%</div>
+          <div class="col m6 s12 skill-container java">
+            <div class="skill-name">Java & JavaFx</div>
+            <div class="skill-level" id="count-skill-level-java">0%</div>
             <div class="skill-bar">
-              <div class="skill-bar-level" id="skill-bar-adobe"></div>
+              <div class="skill-bar-level" id="skill-bar-java"></div>
             </div>
           </div>
-          <div class="skill-container seo">
+          <div class="col m6 s12 skill-container seo">
             <div class="skill-name">SEO / SEA</div>
             <div class="skill-level" id="count-skill-level-seo">0%</div>
             <div class="skill-bar">
@@ -125,96 +139,179 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="services" id="servicesSection">
-      <div class="wrapper">
-        <h2 class="section-title">Mes services</h2>
-        <div class="services-list">
-          <div class="service-container">
-            <img class="service-image" src="./img/icons/svg/computer.svg" alt="icon computer">
-            <p class="service-name">Développement Logiciel</p>
-            <p class="service-infos">Je maîtrise les langages Java et C et ainsi que les bases de la création d'interfaces utilisateurs via la librairie Java Swing.</p>
-          </div>
-          <div class="service-container">
-            <img class="service-image" src="./img/icons/svg/browser.svg" alt="icon browser">
-            <p class="service-name">Développement Web</p>
-            <p class="service-infos">J'utilise régulièrement les langages HTML, CSS/SASS et JavaScript, mais aussi les frameworks et librairies associés (Angular, JQuery).</p>
-          </div>
-          <div class="service-container">
-            <img class="service-image" src="./img/icons/svg/atom.svg" alt="icon ui ux">
-            <p class="service-name">UI / UX</p>
-            <p class="service-infos">Durant ma formation, j'ai appris la création d'interfaces utilisateurs efficace mais aussi l'optimisation de l'expérience utilisateur en général.</p>
-          </div>
-          <div class="service-container">
-            <img class="service-image" src="./img/icons/svg/pen.svg" alt="icon pen">
-            <p class="service-name">Rédaction de contenu</p>
-            <p class="service-infos">Chargé de communication pendant 1 an, je sais rédiger du contenu optimisé allant du contenu web statique à des articles de blog.</p>
-          </div>
-          <div class="service-container">
-            <img class="service-image" src="./img/icons/svg/seo.svg" alt="icon seo">
-            <p class="service-name">SEO/SEA Maketing</p>
-            <p class="service-infos">Ma formation en stratégie digitale comprend la maîtrise du référencement web gratuit (SEO), payant (SEA), et sur les réseaux (SMO).</p>
-          </div>
-          <div class="service-container">
-            <img class="service-image" src="./img/icons/svg/swiss-army-knife.svg" alt="icon gestion crm">
-            <p class="service-name">Gestion CRM</p>
-            <p class="service-infos">J'ai déjà utilisé la plupart des CRM les plus répendus et peut intervenir à tous les niveaux (apparence, plugins, contenu).</p>
+      </section>
+      <section id="services">
+        <div class="container">
+          <h2 class="section-title">Mes services</h2>
+          <div class="services-list">
+            <div class="row">
+              <div class="logiciel col l4 m6 s12">
+                <div class="card hoverable z-depth-2">
+                  <div class="card-image">
+                    <img class="service-image activator" src="img/logiciel512.jpg" alt="icon computer">
+                    <a class="btn-floating halfway-fab waves-effect waves-light red lighten-1 z-depth-2 activator"><i class="material-icons">add</i></a>
+                  </div>
+                  <div class="card-content">
+                    <span class="service-name card-title activator grey-text text-darken-4">Logiciel</span>
+                  </div>
+                  <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">Logiciel<i class="material-icons">close</i></span>
+                    <p class="service-infos">Je maîtrise les langages Java et C et ainsi que les bases de la création d'interfaces utilisateurs via la librairie Java Swing.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="web col l4 m6 s12">
+                <div class="card hoverable z-depth-2">
+                  <div class="card-image">
+                    <img class="service-image activator" src="img/html512.jpg" alt="icon computer">
+                    <a class="btn-floating halfway-fab waves-effect waves-light red lighten-1 z-depth-2 activator"><i class="material-icons">add</i></a>
+                  </div>
+                  <div class="card-content">
+                    <span class="service-name card-title activator grey-text text-darken-4">Web</span>
+                  </div>
+                  <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">Web<i class="material-icons">close</i></span>
+                    <p class="service-infos">J'utilise régulièrement les langages HTML, CSS/SASS et JavaScript, mais aussi les frameworks et librairies associés (Angular, JQuery).</p>
+                  </div>
+                </div>
+              </div>
+              <div class="ui-ux col l4 m6 s12">
+                <div class="card hoverable z-depth-2">
+                  <div class="card-image">
+                    <img class="service-image activator" src="img/ui-ux512.jpg" alt="icon computer">
+                    <a class="btn-floating halfway-fab waves-effect waves-light red lighten-1 z-depth-2 activator"><i class="material-icons">add</i></a>
+                  </div>
+                  <div class="card-content">
+                    <span class="service-name card-title activator grey-text text-darken-4">UI / UX</span>
+                  </div>
+                  <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">UI / UX<i class="material-icons">close</i></span>
+                    <p class="service-infos">Durant ma formation, j'ai appris la création d'interfaces utilisateurs efficace mais aussi l'optimisation de l'expérience utilisateur en général.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="contenu col l4 m6 s12">
+                <div class="card hoverable z-depth-2">
+                  <div class="card-image">
+                    <img class="service-image activator" src="img/contenu512.jpg" alt="icon computer">
+                    <a class="btn-floating halfway-fab waves-effect waves-light red lighten-1 z-depth-2 activator"><i class="material-icons">add</i></a>
+                  </div>
+                  <div class="card-content">
+                    <span class="service-name card-title activator grey-text text-darken-4">Contenu</span>
+                  </div>
+                  <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">Contenu<i class="material-icons">close</i></span>
+                    <p class="service-infos">Chargé de communication pendant 1 an, je sais rédiger du contenu optimisé allant du contenu web statique à des articles de blog.</p>
+                  </div>
+                </div>
+              </div>
+              <div class=" seo-sea col l4 m6 s12">
+                <div class="card hoverable z-depth-2">
+                  <div class="card-image">
+                    <img class="service-image activator" src="img/seo512.jpg" alt="icon computer">
+                    <a class="btn-floating halfway-fab waves-effect waves-light red lighten-1 z-depth-2 activator"><i class="material-icons">add</i></a>
+                  </div>
+                  <div class="card-content">
+                    <span class="service-name card-title activator grey-text text-darken-4">SEO/SEA</span>
+                  </div>
+                  <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">SEO/SEA<i class="material-icons">close</i></span>
+                    <p class="service-infos">Ma formation en stratégie digitale comprend la maîtrise du référencement web gratuit (SEO), payant (SEA), et sur les réseaux (SMO).</p>
+                  </div>
+                </div>
+              </div>
+              <div class="crm col l4 m6 s12">
+                <div class="card hoverable z-depth-2">
+                  <div class="card-image">
+                    <img class="service-image activator" src="img/cms512.jpg" alt="icon computer">
+                    <a class="btn-floating halfway-fab waves-effect waves-light red lighten-1 z-depth-2 activator"><i class="material-icons">add</i></a>
+                  </div>
+                  <div class="card-content">
+                    <span class="service-name card-title activator grey-text text-darken-4">CMS</span>
+                  </div>
+                  <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">CRM<i class="material-icons">close</i></span>
+                    <p class="service-infos">J'ai déjà utilisé la plupart des CRM les plus répendus et peut intervenir à tous les niveaux (apparence, plugins, contenu).</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="music" id="music">
-      <div class="wrapper">
-        <div class="song-list">
-          <div class="song">
-            <iframe src="https://open.spotify.com/embed/track/6vuuZU99A2ilEm7gGhDe7z" width="300" height="300" frameborder="0" allowtransparency="true"></iframe>
-          </div>
-          <div class="song">
-            <iframe src="https://open.spotify.com/embed/track/7Aehm0Uj8GYgKZ7bqdSLLG" width="300" height="300" frameborder="0" allowtransparency="true"></iframe>
-          </div>
-          <div class="song">
-            <iframe src="https://open.spotify.com/embed/track/3UrseYKWJjfpYgIyrigwcj" width="300" height="300" frameborder="0" allowtransparency="true"></iframe>
+      </section>
+      <section id="music">
+        <div class="container">
+          <div class="song-list row">
+            <div class="song col l6 m6 offset-m3 s12">
+              <iframe src="https://open.spotify.com/embed/track/61muv9lHtgN18qbm9oK9pH" width="300" height="300" frameborder="0" allowtransparency="true"></iframe>
+            </div>
+            <div class="song col l6 hide-on-med-and-down s12">
+              <iframe src="https://open.spotify.com/embed/track/4ynyvY0RfitBoAHODNOEAo" width="300" height="300" frameborder="0" allowtransparency="true"></iframe>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="contact" id="contactSection">
-      <div class="wrapper">
-        <h2 class="section-title">Entrons en contact</h2>
-        <div class="contact-infos">
-          <div class="phone">
-            <img src="./img/icons/svg/phone.svg" alt="icon phone">
-            <p class="contact-type">Téléphone</p>
-            <p>+33 6 27 17 12 84</p>
+      </section>
+      <section id="contact">
+        <div class="container">
+          <h2 class="section-title">Entrons en contact</h2>
+          <div class="row center contact-infos">
+            <div class="contact-type phone col l4 m6 s12">
+              <div class="contact-center">
+                <p class="valign-wrapper"><i class="material-icons hide-on-small-only">local_phone</i>Téléphone</p>
+                <p>+33 6 27 17 12 84</p>
+              </div>
+            </div>
+            <div class="contact-type email col l4 m6 s12">
+              <div class="contact-center">
+                <p class="valign-wrapper"><i class="material-icons hide-on-small-only">mail</i>Mail</p>
+                <p>mrn.gael@gmail.com</p>
+              </div>
+            </div>
+            <div class="contact-type adress col l4 m6 offset-m3 s12">
+              <div class="contact-center">
+                <p class="valign-wrapper"><i class="material-icons hide-on-small-only">location_on</i>Adresse</p>
+                <p>Toulouse, 31400</p>
+              </div>
+            </div>
           </div>
-          <div class="email">
-            <img src="./img/icons/svg/book.svg" alt="icon mail">
-            <p class="contact-type">Mail</p>
-            <p>mrn.gael@gmail.com</p>
-          </div>
-          <div class="adress">
-            <img src="./img/icons/svg/map.svg" alt="icon location">
-            <p class="contact-type">Adresse</p>
-            <p>Toulouse</p>
+          <div class="row">
+            <form class="contact-form col s12">
+              <div class="row">
+                <div class="input-field col m6 s12">
+                  <input id="first-name" type="text" class="validate">
+                  <label for="first-name">Prénom</label>
+                </div>
+                <div class="input-field col m6 s12">
+                  <input id="last-name" type="text" class="validate">
+                  <label for="last-name">Nom</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <textarea id="message-content" class="materialize-textarea"></textarea>
+                  <label for="message-content">Message</label>
+                </div>
+              </div>
+              <div class="row valign-wrapper">
+                <div class="input-field col s12">
+                  <input id="email" type="email" class="validate">
+                  <label for="email">Email</label>
+                </div>
+                <button class="btn waves-effect waves-light red darken-1 disabled" style="margin-right:.75rem;" type="submit" name="action">Envoyer
+                  <i class="material-icons right">send</i>
+                </button>
+              </div>
+            </form>
           </div>
         </div>
-        <form class="contact-form" action="index.html" method="post">
-          <div class="form-group form-inline">
-            <input type="text" class="form-control name" placeholder="Votre nom">
-            <input type="text" class="form-control email" placeholder="Email">
-          </div>
-          <div class="form-group">
-            <textarea class="form-control message" placeholder="Votre message"></textarea>
-          </div>
-          <div class="form-group">
-            <button type="button" name="button" class="btn btn-primary submit">Envoyer</button>
-          </div>
-        </form>
+      </section>
+    </main>
+    <footer id="footer" class="page-footer no-padding">
+      <div class="footer-copyright">
+        <div class="container center">
+        Copyright (c) 2018 Copyright <a href="/" style="color: #ffffff; text-decoration: underline;">Gaël MARIN</a> All Rights Reserved.
+        </div>
       </div>
-    </section>
-    <footer class="footer">
-      Copyright (c) 2017 Copyright Gaël MARIN All Rights Reserved.
     </footer>
 
     <script

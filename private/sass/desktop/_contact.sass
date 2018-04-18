@@ -1,0 +1,35 @@
+/* main: ../main.sass */
+
+#contact
+
+  .contact-infos
+    margin-bottom: 0px
+
+  .contact-type
+    position: relative
+    margin-bottom: 15px
+    .contact-center
+      display: inline-block
+      margin: auto
+
+      p
+        margin: 0
+
+      p:first-child
+        text-transform: uppercase
+        font-weight: bold
+        position: relative
+        margin-bottom: 10px
+
+      .material-icons
+        margin-right: 10px
+
+  /* label focus color */
+  .input-field input[type=text]:focus + label, .input-field input[type=email]:focus + label, .materialize-textarea:focus:not([readonly]) + label
+    color: $alizarin !important
+
+
+  /* label underline focus color */
+  .input-field input[type=text]:focus, .input-field input[type=email]:focus, .materialize-textarea:focus:not([readonly])
+    border-bottom: 1px solid $alizarin !important
+    box-shadow: 0 1px 0 0 $alizarin !important

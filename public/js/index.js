@@ -1,26 +1,21 @@
 $(document).ready(function() {
 
   // Horizontal bar under the active section corresponding menu item
-  /*function //animateMenuBar() {
+  function animateMenuBar() {
     var bar = $('#menu-bar');
     var activeItem = $('.navbar-link.active');
-    bar.css('left', (activeItem.offset().left) + "px");
-    bar.css('width', (activeItem.width() + 5) + "px");
-    // Mobile menu
-    document.getElementById("menuToggler").onclick = function(){
-      $("#navbar").toggleClass('extended');
-    }
+    bar.css('left', activeItem.offset().left + "px");
+    bar.css('width', activeItem.parent().width() + "px");
   }
 
-  //animateMenuBar();*/
+  animateMenuBar();
 
-  var elem = document.querySelector('.parallax');
-  var instance = M.Parallax.init(elem, options);
-
-  // Or with jQuery
-
+  // Material compontents initialization
   $(document).ready(function(){
+    // parallax header initialization
     $('.parallax').parallax();
+    // slide-out menu initialization
+    $('.sidenav').sidenav();
   });
 
   // Skill bar count up filling
@@ -32,29 +27,30 @@ $(document).ready(function() {
     suffix: '%'
   };
 
+  // Keep the bar at the good position
   window.onresize = function(e) {
-    ////animateMenuBar();
+    animateMenuBar();
   }
 
   window.onscroll = function(e){
-    var skillsOffsetTop = document.getElementsByClassName('skills')[0].offsetTop - 500  ;
-    var skillsOffsetBottom = document.getElementsByClassName('skills')[0].offsetTop + document.getElementsByClassName('skills')[0].offsetHeight - 200;
+    var skillsOffsetTop = document.getElementById('skills').offsetTop - 700  ;
+    var skillsOffsetBottom = document.getElementById('skills').offsetTop + document.getElementById('skills').offsetHeight - 200;
     if (
       (document.body.scrollTop > skillsOffsetTop || document.documentElement.scrollTop > skillsOffsetTop) &&
       (document.body.scrollTop > skillsOffsetBottom || document.documentElement.scrollTop < skillsOffsetBottom)
     ) {
       document.getElementById('skill-bar-html').style.width = "98%";
-      document.getElementById('skill-bar-css').style.width = "90%";
-      document.getElementById('skill-bar-js').style.width = "95%";
+      document.getElementById('skill-bar-css').style.width = "95%";
+      document.getElementById('skill-bar-js').style.width = "90%";
       document.getElementById('skill-bar-php').style.width = "80%";
-      document.getElementById('skill-bar-adobe').style.width = "70%";
+      document.getElementById('skill-bar-java').style.width = "90%";
       document.getElementById('skill-bar-seo').style.width = "85%";
       if (skillBarCountUp) {
         new CountUp("count-skill-level-html", 0, 98, 0, 0.8, options).start();
         new CountUp("count-skill-level-css", 0, 90, 0, 0.8, options).start();
         new CountUp("count-skill-level-js", 0, 95, 0, 0.8, options).start();
         new CountUp("count-skill-level-php", 0, 80, 0, 0.8, options).start();
-        new CountUp("count-skill-level-adobe", 0, 70, 0, 0.8, options).start();
+        new CountUp("count-skill-level-java", 0, 90, 0, 0.8, options).start();
         new CountUp("count-skill-level-seo", 0, 85, 0, 0.8, options).start();
         skillBarCountUp = false;
       }
@@ -63,14 +59,14 @@ $(document).ready(function() {
       document.getElementById('skill-bar-css').style.width = "0%";
       document.getElementById('skill-bar-js').style.width = "0%";
       document.getElementById('skill-bar-php').style.width = "0%";
-      document.getElementById('skill-bar-adobe').style.width = "0%";
+      document.getElementById('skill-bar-java').style.width = "0%";
       document.getElementById('skill-bar-seo').style.width = "0%";
       if (!skillBarCountUp) {
         new CountUp("count-skill-level-html", 98, 0, 0, 0.8, options).start();
         new CountUp("count-skill-level-css", 90, 0, 0, 0.8, options).start();
         new CountUp("count-skill-level-js", 95, 0, 0, 0.8, options).start();
         new CountUp("count-skill-level-php", 80, 0, 0, 0.8, options).start();
-        new CountUp("count-skill-level-adobe", 70, 0, 0, 0.8, options).start();
+        new CountUp("count-skill-level-java", 90, 0, 0, 0.8, options).start();
         new CountUp("count-skill-level-seo", 85, 0, 0, 0.8, options).start();
       }
       skillBarCountUp = true;
@@ -82,11 +78,11 @@ $(document).ready(function() {
       var itemTop = element.offsetTop;
       var itemBottom = element.offsetTop + element.offsetHeight;
       if(scrollTop >= itemTop - 65 && scrollTop <= itemBottom){
-        var menuItemId = element.id.substr(0, element.id.search('Section'));
+        var menuItemId = element.id + "link";
         if(menuItemId != "") {
           $('.active').toggleClass('active');
           $("#" + menuItemId).toggleClass('active');
-          //animateMenuBar();
+          animateMenuBar();
         }
       }
     })
@@ -100,30 +96,34 @@ $(document).ready(function() {
     var currentLink = navbarLinks[i];
 
     $("#" + currentLink.id).click(function() {
+
+      var sectionId = this.id.search('SideLink') === -1 ? this.id.substr(0, this.id.search('Link')) : this.id.substr(0, this.id.search('SideLink'));
+
       // Scroll to function
       $('html').animate({
-        scrollTop: $("#" + this.id + "Section").offset().top + (this.id == "header" ? 0 : - 64)
+        scrollTop: $("#" + sectionId).offset().top
       },1000, "swing");
 
-      $('#navbar').removeClass('extended');
+      //close sidenav
+      $('.sidenav-overlay').click();
 
       //Menu bar animation
       $('.active').toggleClass('active');
       $("#" + this.id).toggleClass('active');
-      //animateMenuBar();
+      animateMenuBar();
     });
 
   };
 
   $("#cta-button").click(function() {
     $('html').animate({
-      scrollTop: $("#contactSection").offset().top - 64
+      scrollTop: $("#contact").offset().top - 64
     },1000, "swing");
   });
 
-  $("#header-arrow-down").click(function() {
+  $("#header-arrow-down a").click(function() {
     $('html').animate({
-      scrollTop: $("#profileSection").offset().top - 64
+      scrollTop: $("#profile").offset().top - 64
     },1000, "swing");
   });
 
