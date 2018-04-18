@@ -1,6 +1,21 @@
 // main: ../main.sass
 
-#navbar
+nav
+
+  .brand-logo
+    max-height: 100%
+    img
+      max-height: 100%
+      padding: 12px
+      vertical-align: inherit
+
+// Materialize parallax fix
+.parallax-container
+  img
+    left: 0 !important
+    transform: translateX(0)
+
+/*#navbar
   width: 100%
   position: absolute
   top: 0
@@ -25,7 +40,7 @@
       margin: 15px
       height: 100%
 
-.header
+/*.header
   display: flex
   flex-direction: column
   position: relative

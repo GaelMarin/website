@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   // Horizontal bar under the active section corresponding menu item
-  function animateMenuBar() {
+  /*function //animateMenuBar() {
     var bar = $('#menu-bar');
     var activeItem = $('.navbar-link.active');
     bar.css('left', (activeItem.offset().left) + "px");
@@ -12,7 +12,16 @@ $(document).ready(function() {
     }
   }
 
-  animateMenuBar();
+  //animateMenuBar();*/
+
+  var elem = document.querySelector('.parallax');
+  var instance = M.Parallax.init(elem, options);
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('.parallax').parallax();
+  });
 
   // Skill bar count up filling
   var skillBarCountUp = true;
@@ -24,7 +33,7 @@ $(document).ready(function() {
   };
 
   window.onresize = function(e) {
-    animateMenuBar();
+    ////animateMenuBar();
   }
 
   window.onscroll = function(e){
@@ -77,7 +86,7 @@ $(document).ready(function() {
         if(menuItemId != "") {
           $('.active').toggleClass('active');
           $("#" + menuItemId).toggleClass('active');
-          animateMenuBar();
+          //animateMenuBar();
         }
       }
     })
@@ -86,7 +95,6 @@ $(document).ready(function() {
 
   // Smooth Scroll when click on menu item
   var navbarLinks = document.getElementsByClassName('navbar-link');
-
   for(var i = 0; i < navbarLinks.length; i++){
 
     var currentLink = navbarLinks[i];
@@ -102,7 +110,7 @@ $(document).ready(function() {
       //Menu bar animation
       $('.active').toggleClass('active');
       $("#" + this.id).toggleClass('active');
-      animateMenuBar();
+      //animateMenuBar();
     });
 
   };

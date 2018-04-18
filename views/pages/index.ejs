@@ -10,53 +10,42 @@
     <meta name="keywords" content="Developpeur, logiciel, web, seo, HTML, css, JavaScript, " />
     <title>Gaël MARIN - Développeur Full Stack</title>
 
-    <!-- bootstrap v4 -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-    <!-- fin boostrap -->
-
     <!-- font-awesome v5.0.10 -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
 
-
-
-    <!-- anime.js -->
-    <script src="assets/anime/anime.min.js"></script>
-
-    <!-- particles.js -->
-    <script src="assets/particles/particles.min.js"></script>
-
-    <!-- countUp.js -->
-    <script src="assets/count-up/countUp.js"></script>
+    <!-- materialize 1.0 -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="assets/materialize/css/materialize.min.css">
 
     <link rel="stylesheet" href="css/style.css">
 
   </head>
   <body>
-    <nav id="navbar" class="">
-      <div id="menuToggler">
-        <span class="burger-bar"></span>
-        <span class="burger-bar"></span>
-        <span class="burger-bar"></span>
+
+    <nav id="navbar">
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo">
+          <img src="img/logo-gm.svg" alt="Logo">
+        </a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#accueil" class="navbar-link" id="header">Accueil</a></li>
+          <li><a href="#profil" class="navbar-link" id="profile">Profil</a></li>
+          <li><a href="#services" class="navbar-link" id="services">Services</a></li>
+          <li><a href="#contact" class="navbar-link" id="contact">Contact</a></li>
+        </ul>
       </div>
-      <a href="#" id="logo">
-        <img src="./img/logo-gm.png" alt="Logo Gaël MARIN">
-      </a>
-      <ul class="navbar-list">
-        <li class="navbar-item"><a href="#accueil" class="navbar-link active" id="header">Accueil</a></li>
-        <li class="navbar-item"><a href="#profil" class="navbar-link" id="profile">Profil</a></li>
-        <li class="navbar-item"><a href="#services" class="navbar-link" id="services">Services</a></li>
-        <li class="navbar-item"><a href="#contact" class="navbar-link" id="contact">Contact</a></li>
-        <li class="navbar-item"><button type="button" class="cv">Téléchargez mon cv</button></li>
-      </ul>
-      <span id="menu-bar"></span>
     </nav>
     <section class="header" id="headerSection">
-      <div id="particles-js" style="position: absolute;width:100%;z-index: 0;"></div>
+      <div class="parallax-container">
+        <div class="parallax">
+          <img src="img/forestOpti.jpg" alt="">
+        </div>
+      </div>
       <h1 style="display: none;">Gaël MARIN - Développeur Web et Logiciel</h1>
       <div class="wrapper header-content">
+
+          <div id="particles-js" style="position: absolute;width:100%;z-index: 0;"></div>
         <div id="animationLogo">
           <svg width="160" height="115">
             <path d="M 95 30 A 50 50 0 1 0 95 90 L 95 60 L 55 60 M 115 110 L 115 60 L 135 80 L 155 60 L 155 110" stroke-width="6px" fill="none"/>
@@ -227,6 +216,24 @@
     <footer class="footer">
       Copyright (c) 2017 Copyright Gaël MARIN All Rights Reserved.
     </footer>
+
+    <script
+    			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+    			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    			  crossorigin="anonymous"></script>
+
+    <!-- anime. -->
+    <script src="assets/anime/anime.min.js"></script>
+
+    <!-- particles.js -->
+    <script src="assets/particles/particles.min.js"></script>
+
+    <!-- countUp.js -->
+    <script src="assets/count-up/countUp.js"></script>
+
+    <!-- materialize 1.0 -->
+    <script type="text/javascript" src="assets\materialize\js\materialize.js"></script>
+
     <script type="text/javascript" src="js/index.js"></script>
   </body>
 </html>
