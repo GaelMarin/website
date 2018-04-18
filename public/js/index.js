@@ -37,8 +37,8 @@ $(document).ready(function() {
   }
 
   window.onscroll = function(e){
-    var skillsOffsetTop = document.getElementsByClassName('skills')[0].offsetTop - 500  ;
-    var skillsOffsetBottom = document.getElementsByClassName('skills')[0].offsetTop + document.getElementsByClassName('skills')[0].offsetHeight - 200;
+    var skillsOffsetTop = document.getElementById('skills').offsetTop - 700  ;
+    var skillsOffsetBottom = document.getElementById('skills').offsetTop + document.getElementById('skills').offsetHeight - 200;
     if (
       (document.body.scrollTop > skillsOffsetTop || document.documentElement.scrollTop > skillsOffsetTop) &&
       (document.body.scrollTop > skillsOffsetBottom || document.documentElement.scrollTop < skillsOffsetBottom)
@@ -82,7 +82,7 @@ $(document).ready(function() {
       var itemTop = element.offsetTop;
       var itemBottom = element.offsetTop + element.offsetHeight;
       if(scrollTop >= itemTop - 65 && scrollTop <= itemBottom){
-        var menuItemId = element.id.substr(0, element.id.search('Section'));
+        var menuItemId = element.id + "link";
         if(menuItemId != "") {
           $('.active').toggleClass('active');
           $("#" + menuItemId).toggleClass('active');
@@ -102,7 +102,7 @@ $(document).ready(function() {
     $("#" + currentLink.id).click(function() {
       // Scroll to function
       $('html').animate({
-        scrollTop: $("#" + this.id + "Section").offset().top + (this.id == "header" ? 0 : - 64)
+        scrollTop: $("#" + this.id.substr(0, this.id.search('Link'))).offset().top + (this.id == "header" ? 0 : - 64)
       },1000, "swing");
 
       $('#navbar').removeClass('extended');
@@ -117,13 +117,13 @@ $(document).ready(function() {
 
   $("#cta-button").click(function() {
     $('html').animate({
-      scrollTop: $("#contactSection").offset().top - 64
+      scrollTop: $("#contact").offset().top - 64
     },1000, "swing");
   });
 
-  $("#header-arrow-down").click(function() {
+  $("#header-arrow-down a").click(function() {
     $('html').animate({
-      scrollTop: $("#profileSection").offset().top - 64
+      scrollTop: $("#profile").offset().top - 64
     },1000, "swing");
   });
 

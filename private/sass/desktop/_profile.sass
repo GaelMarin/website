@@ -1,0 +1,36 @@
+/* main: ../main.sass */
+
+#profile
+
+  position: relative
+  padding: 100px 0px
+
+  &::before
+    content: ''
+    display: block
+    position: fixed
+    right: 0
+    bottom: 0
+    top: 0
+    left: 0
+    margin-left: 50%
+    width: 60%
+    height: 100%
+    z-index: -1
+    transform: skew(-50deg)
+    background-color: rgba($alizarin, .1)
+
+  .container
+    max-width: 800px
+
+  .profile-picture
+    display: block
+    margin: auto
+    margin-bottom: 20px
+
+  .profile-title
+    margin-top: 0
+    font-size: 40px
+
+  .profile-text
+    font-size: 18px

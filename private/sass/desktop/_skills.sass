@@ -1,0 +1,32 @@
+/* main: ../main.sass */
+
+#skills
+  color: $clair
+  background: $noir url('/img/laptopOpti.jpg') fixed center center
+  background-size: cover
+  padding: 50px 0px
+
+  .skills-list
+    margin-bottom: 0px
+    .skill-container
+      position: relative
+      padding: 0px 40px 0px
+      margin-bottom: 40px
+      &:nth-last-child(-n+2)
+        margin-bottom: 0px
+      .skill-level
+        position: absolute
+        top: 0
+        right: 40px
+      .skill-bar
+        height: 8px
+        border-radius: 4px
+        background-color: $clair
+        margin-top: 10px
+        position: relative
+
+        .skill-bar-level
+          @extend .skill-bar
+          width: 0px
+          background-color: $alizarin
+          transition: width ease-in-out .6s
