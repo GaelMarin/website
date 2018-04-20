@@ -73,12 +73,12 @@ $(document).ready(function() {
     }
 
     // menu bar animation on top of sections
-    $('section').each(function(index, element){
+    $('#header, #profile, #services, #contact').each(function(index, element){
       var scrollTop = $('html').scrollTop();
-      var itemTop = element.offsetTop;
+      var itemTop = element.offsetTop
       var itemBottom = element.offsetTop + element.offsetHeight;
-      if(scrollTop >= itemTop - 65 && scrollTop <= itemBottom){
-        var menuItemId = element.id + "link";
+      if(scrollTop >= itemTop - 64 && scrollTop <= itemBottom){
+        var menuItemId = element.id + "Link";
         if(menuItemId != "") {
           $('.active').toggleClass('active');
           $("#" + menuItemId).toggleClass('active');
@@ -101,7 +101,7 @@ $(document).ready(function() {
 
       // Scroll to function
       $('html').animate({
-        scrollTop: $("#" + sectionId).offset().top
+        scrollTop: $("#" + sectionId).offset().top - 64
       },1000, "swing");
 
       //close sidenav
