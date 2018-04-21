@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon -e js,ejs,css,sass ./serveur/server.js"
+    "start": "nodemon -e js,ejs,css,sass ./serveur/server.js",
+    "buildjs": "grunt"
   },
   "author": "",
   "license": "ISC",
@@ -13,6 +14,11 @@
     "compression": "^1.7.2",
     "ejs": "^2.5.8",
     "express": "^4.16.3",
+    "grunt": "^1.0.2",
     "nodemon": "^1.17.3"
+  },
+  "devDependencies": {
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-uglify": "^3.3.0"
   }
 }
